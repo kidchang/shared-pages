@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hammer & Frisbee · Cat Sitting Instructions</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--ocean:#1e6091;--ocean-deep:#14406b;--sunset:#f4a261;--coral:#e76f51;--palm:#2a9d8f;--sand:#fef6e4;--cream:#faf4e7;--ink:#1d3557;--soft-ink:#4a5e7c;--muted:#8a9bb0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans SC',sans-serif;background:var(--cream);color:var(--ink);line-height:1.75}
+.container{max-width:720px;margin:0 auto;background:#fff;box-shadow:0 4px 40px rgba(20,64,107,.08)}
+.cover{position:relative;background:linear-gradient(135deg,#1e6091,#2a9d8f 50%,#f4a261);color:#fff;padding:70px 40px 60px;text-align:center;overflow:hidden}
+.cover::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.25),transparent 70%);border-radius:50%}
+.cover::after{content:'';position:absolute;bottom:-80px;left:-80px;width:280px;height:280px;background:radial-gradient(circle,rgba(255,255,255,.15),transparent 70%);border-radius:50%}
+.cover-handwritten{font-family:'Caveat',cursive;font-size:26px;opacity:.9;margin-bottom:8px;letter-spacing:2px}
+.cover h1{font-family:'Noto Serif SC',serif;font-size:44px;font-weight:700;margin-bottom:16px;letter-spacing:4px;line-height:1.3;position:relative;z-index:1}
+.subtitle{font-size:16px;opacity:.95;letter-spacing:6px;margin-bottom:36px;position:relative;z-index:1}
+.cover-divider{width:60px;height:2px;background:#fff;margin:0 auto 36px;opacity:.6}
+.cover-quick-info{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:460px;margin:0 auto;position:relative;z-index:1}
+.quick-card{background:rgba(255,255,255,.18);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);border-radius:14px;padding:18px 14px}
+.quick-card strong{display:block;font-size:12px;text-transform:uppercase;letter-spacing:1.5px;opacity:.8;margin-bottom:6px;font-weight:500}
+.quick-card span{font-size:15px;font-weight:600}
+.section{padding:56px 44px;border-bottom:1px dashed #d4dde6}
+.section:last-child{border-bottom:none}
+.section-tag{display:inline-block;font-family:'Caveat',cursive;font-size:22px;color:var(--coral);margin-bottom:4px}
+h2{font-family:'Noto Serif SC',serif;font-size:30px;color:var(--ocean-deep);margin-bottom:8px;letter-spacing:2px;font-weight:700}
+.section-intro{color:var(--soft-ink);font-size:14.5px;margin-bottom:28px;border-left:3px solid var(--sunset);padding-left:14px;font-style:italic}
+h3{font-family:'Noto Serif SC',serif;font-size:21px;color:var(--ocean);margin:30px 0 14px;font-weight:600}
+h3 .en{font-family:'Noto Sans SC',sans-serif;font-size:13px;color:var(--muted);margin-left:8px;font-weight:400;letter-spacing:1px}
+p{margin-bottom:14px;font-size:15px}
+.photo{margin:22px -10px;border-radius:14px;overflow:hidden;position:relative;box-shadow:0 10px 30px rgba(20,64,107,.18);background:#e8ecf1}
+.photo img{width:100%;height:auto;display:block;aspect-ratio:16/10;object-fit:cover;background:#e8ecf1}
+.photo-caption{background:var(--ink);color:#fff;padding:10px 16px;font-size:13px;text-align:center;letter-spacing:1px;font-weight:300}
+.tip{display:flex;gap:18px;padding:18px 20px;margin:14px 0;border-radius:12px;align-items:flex-start;color:#fff}
+.tip-icon{font-size:28px;flex-shrink:0;line-height:1;width:44px;text-align:center}
+.tip-title{font-weight:600;margin-bottom:4px;font-size:16px;letter-spacing:1px}
+.tip-text{font-size:14px;line-height:1.7;opacity:.95}
+.tip-1{background:linear-gradient(135deg,#1e6091,#2a9d8f)}.tip-2{background:linear-gradient(135deg,#e76f51,#f4a261)}.tip-3{background:linear-gradient(135deg,#2a9d8f,#52b788)}.tip-4{background:linear-gradient(135deg,#f4a261,#e9c46a);color:#5c3d1e}.tip-5{background:linear-gradient(135deg,#14406b,#1e6091)}
+.tip-4 .tip-text{color:#5c3d1e}
+.activity{margin-bottom:36px}
+.activity-meta{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
+.meta-chip{background:#fff;border:1.5px solid var(--ocean);color:var(--ocean);padding:5px 14px;border-radius:20px;font-size:12.5px;font-weight:500;letter-spacing:1px}
+.meta-chip.warm{border-color:var(--coral);color:var(--coral)}
+.activity ul{list-style:none;padding:0}
+.activity li{padding:6px 0 6px 22px;position:relative;font-size:14.5px;line-height:1.7}
+.activity li::before{content:'✦';position:absolute;left:0;color:var(--sunset);font-weight:bold}
+.hotel-feature-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+.feature-card{padding:22px 18px;border-radius:14px;color:#fff;text-align:center}
+.feature-card .icon{font-size:32px;margin-bottom:10px}
+.feature-card .title{font-weight:600;font-size:16px;margin-bottom:6px;letter-spacing:1px}
+.feature-card .desc{font-size:13px;opacity:.95;line-height:1.6}
+.feature-card.green{background:linear-gradient(135deg,var(--palm),#52b788)}
+.feature-card.blue{background:linear-gradient(135deg,var(--ocean),#4a8fc2)}
+.closing{background:linear-gradient(135deg,var(--coral),var(--sunset));color:#fff;padding:50px 40px;text-align:center}
+.closing-handwritten{font-family:'Caveat',cursive;font-size:36px;line-height:1.4;margin-bottom:6px}
+.closing-sub{font-size:14px;opacity:.95;letter-spacing:4px}
+.hl{background:linear-gradient(120deg,transparent 0%,transparent 25%,#fef3c7 25%,#fef3c7 100%);padding:0 4px;font-weight:600;color:var(--ocean-deep)}
+.pull-quote{background:var(--sand);border-left:4px solid var(--coral);padding:16px 20px;margin:22px 0;font-size:14.5px;color:var(--soft-ink);border-radius:0 8px 8px 0}
+@media(max-width:600px){.container{box-shadow:none}.section{padding:40px 24px}.cover{padding:50px 24px}.cover h1{font-size:32px;letter-spacing:2px}.hotel-feature-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<section class="cover">
+<div class="cover-handwritten">Meow! 🐾</div>
+<h1>Hammer & Frisbee</h1>
+<div class="subtitle">CAT · SITTING · GUIDE</div>
+<div class="cover-divider"></div>
+<div class="cover-quick-info">
+<div class="quick-card"><strong>The Kitties</strong><span>Hammer & Frisbee</span></div>
+<div class="quick-card"><strong>Entry</strong><span>Passcode (Yale lock)</span></div>
+<div class="quick-card"><strong>Daily Pâtés</strong><span>2 per bowl</span></div>
+<div class="quick-card"><strong>Litter Mix</strong><span>Tofu + Clay 1:1</span></div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-tag">Welcome</div>
+<h2>About this Guide</h2>
+<p class="section-intro">Everything you need to take care of Hammer & Frisbee while we are away.</p>
+<div class="photo">
+<img src="https://catsitting.xilehome.life/assets/img/cats.png" alt="Hammer and Frisbee">
+<div class="photo-caption">Hammer & Frisbee · our two little ones</div>
+</div>
+<p>Thank you so much for stopping by to look after our kitties! This little booklet walks you through <span class="hl">getting into the house</span>, <span class="hl">food & water</span>, and <span class="hl">the litter boxes</span> — plus a few small notes that make their day easier.</p>
+<p>If anything is unclear or you run into trouble, please text or call us anytime. Phone numbers are at the bottom of this page.</p>
+</section>
+
+<section class="section">
+<div class="section-tag">Getting In</div>
+<h2>🔑 Entering the House</h2>
+<p class="section-intro">Passcode entry · Yale smart lock</p>
+
+<p>We'll send you the <span class="hl">door passcode via a secured message</span> before your first visit. Just enter it on the keypad to unlock the front door.</p>
+
+<div class="pull-quote">🔒 After each drop-in visit, please <strong>press the "Yale" button</strong> on the lock to lock the door. One press locks it — a quick double-check before you walk away is always appreciated.</div>
+
+<div class="hotel-feature-row">
+<div class="feature-card blue"><div class="icon">🔢</div><div class="title">Keypad Entry</div><div class="desc">Use the passcode<br>sent securely</div></div>
+<div class="feature-card green"><div class="icon">🔒</div><div class="title">Yale Button</div><div class="desc">Lock the door<br>after each visit</div></div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-tag">Mealtime</div>
+<h2>🥣 Water & Food</h2>
+<p class="section-intro">Fresh water · dry kibble top-up · two pâtés per bowl daily</p>
+
+<div class="activity">
+<h3>💧 Water Fountain <span class="en">Daily refill</span></h3>
+<div class="photo"><img src="https://catsitting.xilehome.life/assets/img/water.jpg" alt="Water fountain"><div class="photo-caption">Water fountain · refill with the watering can</div></div>
+<div class="activity-meta">
+<span class="meta-chip">🚰 Tap water OK</span>
+<span class="meta-chip">⏰ Each visit</span>
+<span class="meta-chip warm">🪣 Watering can</span>
+</div>
+<ul>
+<li>Refill the water fountain using the <strong>watering can</strong> with <strong>tap water</strong></li>
+<li>Top it off each visit so the kitties always have <strong>fresh water available</strong></li>
+</ul>
+</div>
+
+<div class="activity">
+<h3>🌾 Dry Food <span class="en">Free-Feeder</span></h3>
+<div class="photo"><img src="https://catsitting.xilehome.life/assets/img/food-new.png" alt="Dry food container"><div class="photo-caption">Dry food container · keep the free-feeder topped up</div></div>
+<div class="activity-meta">
+<span class="meta-chip">🥫 In container</span>
+<span class="meta-chip">♾️ Free-feed</span>
+<span class="meta-chip warm">📦 Keep full</span>
+</div>
+<ul>
+<li>The free-feeder will be filled before we leave; backup kibble is in the storage container nearby</li>
+<li>Please make sure the free-feeder <strong>never runs empty</strong> — top it up from the container as needed</li>
+</ul>
+</div>
+
+<div class="activity">
+<h3>🥫 Pâtés <span class="en">Two per bowl, daily</span></h3>
+<div class="photo"><img src="https://catsitting.xilehome.life/assets/img/pates.jpg" alt="Pate cans"><div class="photo-caption">Pâtés · under the sideboard next to the dining table</div></div>
+<div class="photo"><img src="https://catsitting.xilehome.life/assets/img/bowls.JPG" alt="Cat bowls"><div class="photo-caption">Two bowls · two pâtés in each, every day</div></div>
+<div class="activity-meta">
+<span class="meta-chip">📍 Under sideboard</span>
+<span class="meta-chip warm">🥄 2 pâtés / bowl</span>
+<span class="meta-chip">🗑️ Black bin</span>
+</div>
+<ul>
+<li>Pâtés are stored <strong>under the sideboard</strong> next to the dining table</li>
+<li>Please put <strong>two pâtés in each bowl</strong>, every day</li>
+<li>Toss empty pâté containers into the <strong>same trash bag as the used litter</strong> — both go in the <strong>black bin (landfill)</strong></li>
+</ul>
+</div>
+
+<div class="pull-quote">💡 Little tip: Hammer and Frisbee are usually most excited at pâté time — feel free to say hi and give them a little chin scratch while they eat.</div>
+</section>
+
+<section class="section">
+<div class="section-tag">Litter Care</div>
+<h2>🚽 Litter Boxes</h2>
+<p class="section-intro">Inside the white cabinet · push fully back · 1:1 tofu + clay top-up</p>
+
+<div class="photo">
+<img src="https://catsitting.xilehome.life/assets/img/litterbox.jpg" alt="Litter box inside white cabinet">
+<div class="photo-caption">Litter box · tucked inside the white cabinet</div>
+</div>
+
+<p>The litter box is located <strong>inside the white cabinet</strong>. After cleaning, please <span class="hl">push it all the way back in before closing the door</span> — otherwise the kitties will not be able to enter it.</p>
+
+<h3>🧹 Cleaning & Top-up</h3>
+<div class="activity">
+<ul>
+<li>When the litter gets low, please <strong>top it up</strong>. We usually mix <strong>Pidan tofu litter</strong> with <strong>clay litter</strong> in a <strong>1 : 1 ratio</strong></li>
+<li>Scoop into the <strong>small trash bin</strong> next to the litter box</li>
+<li>Once the bag is full, tie it off and drop it in the <strong>black trash bin on the north side</strong> of the house</li>
+<li>Fresh trash bags are stocked in the spot shown below</li>
+</ul>
+</div>
+
+<div class="pull-quote">📝 <strong>Note:</strong> If we've run out of Pidan tofu litter, just use the clay litter on its own — that's totally fine. The clay-litter brand in the photo may be outdated; whatever brand is on the shelf at the time is the right one to use.</div>
+
+<div class="photo">
+<img src="https://catsitting.xilehome.life/assets/img/bags.jpg" alt="Trash bags storage">
+<div class="photo-caption">Replacement trash bags · stocked here</div>
+</div>
+
+<div class="hotel-feature-row">
+<div class="feature-card green"><div class="icon">🧂</div><div class="title">1:1 Mix</div><div class="desc">Pidan tofu litter<br>+ clay litter</div></div>
+<div class="feature-card blue"><div class="icon">🗑️</div><div class="title">North-Side Bin</div><div class="desc">Full bags go to the<br>black trash bin</div></div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-tag">Quick Reminders</div>
+<h2>💡 Helpful Notes</h2>
+<p class="section-intro">A short checklist for each drop-in visit</p>
+
+<div class="tip tip-1"><div class="tip-icon">🔒</div><div><div class="tip-title">Lock the Yale</div><div class="tip-text">Press the <strong>Yale button</strong> after every visit to lock the front door behind you.</div></div></div>
+<div class="tip tip-2"><div class="tip-icon">❄️</div><div><div class="tip-title">AC back to 72°F</div><div class="tip-text">Adjust the thermostat freely while you're here, but please <strong>return it to 72°F</strong> on your way out.</div></div></div>
+<div class="tip tip-3"><div class="tip-icon">💧</div><div><div class="tip-title">Top up water & kibble</div><div class="tip-text">Refill the <strong>fountain with tap water</strong> and check that the <strong>free-feeder is full</strong> each visit.</div></div></div>
+<div class="tip tip-4"><div class="tip-icon">🥫</div><div><div class="tip-title">Two pâtés per bowl</div><div class="tip-text"><strong>2 pâtés in each bowl, every day.</strong> Empty cans go in the same trash bag as the litter.</div></div></div>
+<div class="tip tip-5"><div class="tip-icon">🚪</div><div><div class="tip-title">Push the litter box back</div><div class="tip-text">After cleaning, slide the box <strong>all the way back</strong> before closing the cabinet so the kitties can reach it.</div></div></div>
+</section>
+
+<section class="section">
+<div class="section-tag">Contact</div>
+<h2>📞 Reach Us Anytime</h2>
+<p class="section-intro">Text or call — whichever is easier for you</p>
+<div class="hotel-feature-row">
+<div class="feature-card blue"><div class="icon">📱</div><div class="title">Xicheng</div><div class="desc">(219) 796-7902</div></div>
+<div class="feature-card green"><div class="icon">📱</div><div class="title">Lei</div><div class="desc">(412) 680-1578</div></div>
+</div>
+<p style="text-align:center;margin-top:18px;font-size:15px;color:var(--soft-ink);">✉️ <strong>mr.xchang@gmail.com</strong></p>
+</section>
+
+<section class="closing">
+<div class="closing-handwritten">Thank you for taking care<br>of our kitties 🐾</div>
+<div class="closing-sub">HAMMER &nbsp;&amp;&nbsp; FRISBEE</div>
+</section>
+
+</div>
+</body>
+</html>
